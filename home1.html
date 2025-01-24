@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Investment Edge</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+ 
+        /* Header Styles */
+        header {
+            background-color: #f8f8f8;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid #ddd;
+            position: sticky;
+            top: 0;
+            font-weight: bold;
+            z-index: 1000;
+        }
+ 
+        .logo {
+            font-size: 1.6em;
+            font-weight: bold;
+            color: #222;
+        }
+ 
+        .logo span {
+            color: #0f518f;
+        }
+ 
+        nav {
+            display: flex;
+            gap: 20px;
+            flex: 1;
+            justify-content: flex-end;
+ 
+        }
+ 
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-size: 1em;
+            transition: color 0.3s;
+        }
+ 
+        nav a:hover {
+            color: #6292c0;
+        }
+ 
+        .sign-in {
+            padding: 8px 16px;
+            background-color: #437aae;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 0.9em;
+            transition: background-color 0.3s;
+            margin-left: 20px;
+        }
+ 
+        .sign-in:hover {
+            background-color: #437aae;
+        }
+ 
+        .hero-image {
+            width: 100%;
+            height: 70vh;
+            background-image: url('insurance.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+ 
+       
+        /* JavaScript-enhanced section styles */
+        .info-section {
+            padding: 40px 20px;
+            background-color: #f9f9f9;
+            text-align: center;
+        }
+ 
+        .info-section h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+ 
+        .info-section p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+ 
+        .info-button {
+            padding: 10px 20px;
+            background-color: #437aae;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+ 
+        .info-button:hover {
+            background-color: #437aae;
+        }
+    </style>
+    <link rel="stylesheet" href="chatbot.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">The <span>Investment</span><span> Edge</span></div>
+        <nav>
+            <a href="#">Credit Cards</a>
+            <a href="insurance.html">Insurance</a>
+            <a href="Accounts.html">Accounts</a>
+            <a href="#">Loans</a>
+        </nav>
+        <a href="sign_in_page.html" class="sign-in">Sign in</a>
+    </header>
+ 
+    <!-- Hero Section -->
+    <div class="hero-image"></div>
+ 
+    <!-- Info Section -->
+    <section class="info-section">
+        <h2>Explore Your Options</h2>
+        <p>We provide tailored financial solutions to help you secure your future.</p>
+        <button class="info-button" onclick="showMoreInfo()">Learn More</button>
+    </section>
+    <!-- Chatbot button -->
+    <button class="chatbot-button" id="chatbotButton">🤖</button>
+ 
+    <!-- Chatbot popup -->
+    <div class="chatbot-popup" id="chatbotPopup">
+    <div class="chat-header">We’re Here to Help</div>
+    <div class="chat-messages" id="chatMessages">
+        <p>Hello! How can I assist you today?</p>
+    </div>
+    <div class="chat-input">
+        <input type="text" id="chatInput" placeholder="Type your query here...">
+        <button id="sendButton">Send</button>
+    </div>
+    </div>
+ 
+    <script>
+        function showMoreInfo() {
+            alert('More information about our financial solutions is coming soon!');
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
