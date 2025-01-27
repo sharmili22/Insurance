@@ -9,8 +9,9 @@
             margin: 0;
             font-family: Arial, sans-serif;
             line-height: 1.6;
+            background-color: #f4f4f4;
         }
- 
+
         /* Header Styles */
         header {
             background-color: #f8f8f8;
@@ -24,36 +25,35 @@
             font-weight: bold;
             z-index: 1000;
         }
- 
+
         .logo {
             font-size: 1.6em;
             font-weight: bold;
             color: #222;
         }
- 
+
         .logo span {
             color: #0f518f;
         }
- 
+
         nav {
             display: flex;
             gap: 20px;
             flex: 1;
             justify-content: flex-end;
- 
         }
- 
+
         nav a {
             text-decoration: none;
             color: #333;
             font-size: 1em;
             transition: color 0.3s;
         }
- 
+
         nav a:hover {
             color: #6292c0;
         }
- 
+
         .sign-in {
             padding: 8px 16px;
             background-color: #437aae;
@@ -63,56 +63,201 @@
             font-size: 0.9em;
             transition: background-color 0.3s;
             margin-left: 20px;
+            cursor: pointer;
         }
- 
+
         .sign-in:hover {
-            background-color: #437aae;
+            background-color: #6292c0;
         }
- 
+
         .hero-image {
+            position: relative;
             width: 100%;
             height: 70vh;
             background-image: url('insurance.jpg');
             background-size: cover;
             background-position: center;
         }
- 
-       
-        /* JavaScript-enhanced section styles */
-        .info-section {
-            padding: 40px 20px;
-            background-color: #f9f9f9;
+
+        /* Feature Section */
+        .features-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 50px 20px;
+            background-color: #fff;
+        }
+
+        .feature-card {
+            background-color: #ffffff;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .feature-card h3 {
+            font-size: 1.5em;
+            color: #0f518f;
+            margin-bottom: 10px;
+        }
+
+        .feature-card p {
+            font-size: 1.1em;
+            color: #555;
+        }
+
+        /* Popular Services and Offers Section */
+        .popular-services {
+            background-color: #e9f2fa;
+            padding: 50px 20px;
             text-align: center;
         }
- 
-        .info-section h2 {
-            font-size: 2em;
+
+        .popular-services h2 {
+            font-size: 2.5em;
+            color: #0f518f;
+            margin-bottom: 40px;
+        }
+
+        .services-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .offer-card {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            text-align: center;
+            height: 250px;
+        }
+
+        .offer-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .offer-card h3 {
+            font-size: 1.4em;
+            color: #437aae;
             margin-bottom: 20px;
         }
- 
-        .info-section p {
-            font-size: 1.2em;
+
+        .offer-card p {
+            font-size: 1.1em;
+            color: #555;
+        }
+
+        .offer-card .offer-icon {
+            font-size: 3em;
+            color: #437aae;
             margin-bottom: 20px;
         }
- 
-        .info-button {
-            padding: 10px 20px;
+
+        /* Sign In / Sign Up Form Styles */
+        .sign-in-form, .sign-up-form {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+            z-index: 1001;
+        }
+
+        .sign-in-modal, .sign-up-modal {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            width: 300px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .sign-in-modal input, .sign-up-modal input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .sign-in-modal button, .sign-up-modal button {
+            width: 100%;
+            padding: 10px;
             background-color: #437aae;
             color: white;
             border: none;
             border-radius: 5px;
             font-size: 1em;
             cursor: pointer;
-            transition: background-color 0.3s;
         }
- 
-        .info-button:hover {
+
+        .sign-in-modal button:hover, .sign-up-modal button:hover {
+            background-color: #6292c0;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 20px;
+            color: #000;
+            cursor: pointer;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #437aae;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .footer-subscribe {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #6292c0;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .footer-subscribe:hover {
             background-color: #437aae;
         }
+
+        .social-links a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+
+        .social-links a:hover {
+            color: #6292c0;
+        }
     </style>
-    <link rel="stylesheet" href="chatbot.css">
 </head>
 <body>
+
     <!-- Header -->
     <header>
         <div class="logo">The <span>Investment</span><span> Edge</span></div>
@@ -122,38 +267,147 @@
             <a href="Accounts.html">Accounts</a>
             <a href="#">Loans</a>
         </nav>
-        <a href="sign_in_page.html" class="sign-in">Sign in</a>
+        <span id="signInButton" class="sign-in">Sign in</span>
     </header>
- 
+
     <!-- Hero Section -->
     <div class="hero-image"></div>
- 
-    <!-- Info Section -->
-    <section class="info-section">
-        <h2>Explore Your Options</h2>
-        <p>We provide tailored financial solutions to help you secure your future.</p>
-        <button class="info-button" onclick="showMoreInfo()">Learn More</button>
+
+    <!-- Feature Section -->
+    <section class="features-section">
+        <div class="feature-card">
+            <h3>Credit Cards</h3>
+            <p>Find the best credit cards with unbeatable rewards and benefits.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Insurance</h3>
+            <p>Get the right coverage for your needs and protect your loved ones.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Loans</h3>
+            <p>Access personal loans with the lowest interest rates available.</p>
+        </div>
     </section>
-    <!-- Chatbot button -->
-    <button class="chatbot-button" id="chatbotButton">🤖</button>
- 
-    <!-- Chatbot popup -->
-    <div class="chatbot-popup" id="chatbotPopup">
-    <div class="chat-header">We’re Here to Help</div>
-    <div class="chat-messages" id="chatMessages">
-        <p>Hello! How can I assist you today?</p>
+
+    <!-- Popular Services and Offers Section -->
+    <section class="popular-services">
+        <h2>Popular Services and Offers</h2>
+        <div class="services-container">
+            <div class="offer-card">
+                <div class="offer-icon">💳</div>
+                <h3>Cashback Offer</h3>
+                <p>Enjoy up to 5% cashback on select credit cards. Start saving today!</p>
+            </div>
+            <div class="offer-card">
+                <div class="offer-icon">🛡️</div>
+                <h3>Special Insurance Discounts</h3>
+                <p>Get exclusive discounts on life and health insurance policies.</p>
+            </div>
+            <div class="offer-card">
+                <div class="offer-icon">💰</div>
+                <h3>Personal Loan Benefits</h3>
+                <p>Receive additional benefits with personal loans at competitive rates.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 The Investment Edge. All rights reserved.</p>
+        <div class="social-links">
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">LinkedIn</a>
+        </div>
+        <div class="footer-subscribe">
+            Subscribe to Our Newsletter
+        </div>
+    </footer>
+
+    <!-- Sign In Form Modal -->
+    <div class="sign-in-form" id="signInForm">
+        <div class="sign-in-modal">
+            <span class="close-btn" onclick="closeSignInForm()">X</span>
+            <h2>Sign In</h2>
+            <form id="signInFormSubmit" onsubmit="return validateSignIn()">
+                <input type="email" id="signInEmail" placeholder="Email" required>
+                <input type="password" id="signInPassword" placeholder="Password" required>
+                <button type="submit">Sign In</button>
+            </form>
+            <p>Don't have an account? <a href="#" id="signUpLink">Sign up</a></p>
+        </div>
     </div>
-    <div class="chat-input">
-        <input type="text" id="chatInput" placeholder="Type your query here...">
-        <button id="sendButton">Send</button>
+
+    <!-- Sign Up Form Modal -->
+    <div class="sign-up-form" id="signUpForm">
+        <div class="sign-up-modal">
+            <span class="close-btn" onclick="closeSignUpForm()">X</span>
+            <h2>Sign Up</h2>
+            <form id="signUpFormSubmit" onsubmit="return validateSignUp()">
+                <input type="email" id="signUpEmail" placeholder="Email" required>
+                <input type="password" id="signUpPassword" placeholder="Password" required>
+                <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+                <button type="submit">Sign Up</button>
+            </form>
+        </div>
     </div>
-    </div>
- 
+
     <script>
-        function showMoreInfo() {
-            alert('More information about our financial solutions is coming soon!');
+        // Open Sign In Form Modal
+        document.getElementById('signInButton').onclick = function() {
+            document.getElementById('signInForm').style.display = 'flex';
+        }
+
+        // Open Sign Up Form Modal from the Sign In Modal
+        document.getElementById('signUpLink').onclick = function() {
+            document.getElementById('signInForm').style.display = 'none';
+            document.getElementById('signUpForm').style.display = 'flex';
+        }
+
+        // Close Sign In Form Modal
+        function closeSignInForm() {
+            document.getElementById('signInForm').style.display = 'none';
+        }
+
+        // Close Sign Up Form Modal
+        function closeSignUpForm() {
+            document.getElementById('signUpForm').style.display = 'none';
+        }
+
+        // Validate Sign In Form
+        function validateSignIn() {
+            var email = document.getElementById("signInEmail").value;
+            var password = document.getElementById("signInPassword").value;
+
+            if (email === "" || password === "") {
+                alert("Please fill in both fields.");
+                return false;
+            }
+            alert("Sign-in successful!");
+            closeSignInForm();
+            return true;
+        }
+
+        // Validate Sign Up Form
+        function validateSignUp() {
+            var email = document.getElementById("signUpEmail").value;
+            var password = document.getElementById("signUpPassword").value;
+            var confirmPassword = document.getElementById("confirmPassword").value;
+
+            if (email === "" || password === "" || confirmPassword === "") {
+                alert("Please fill in all fields.");
+                return false;
+            }
+
+            if (password !== confirmPassword) {
+                alert("Passwords do not match.");
+                return false;
+            }
+
+            alert("Sign-up successful!");
+            closeSignUpForm();
+            return true;
         }
     </script>
-    <script src="script.js"></script>
 </body>
 </html>
